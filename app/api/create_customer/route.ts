@@ -1,10 +1,11 @@
+'use server'
 import prismadb from "@/app/lib/prismadb";
 import { customers } from "@/app/lib/tables";
 
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
-  
+
 
   const customerdata = await prismadb.customers.createMany({
     data: customers,
