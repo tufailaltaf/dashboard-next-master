@@ -7,7 +7,6 @@ import { get_response } from '@/actions/response';
 import { Suspense } from 'react';
 import { RevenueChartSkeleton } from '../../ui/skeletons';
 
- 
 export default  function Page() {
 const {data} = get_response(`/api/get_invoices`)
 const latestInvoices = data
@@ -42,6 +41,7 @@ const revenue = revenueData
 //   model2: numberOfCustomers,
 // };
 // //console.log(latestInvoices)
+
   return (
     
     <main>
