@@ -6,12 +6,10 @@ import { notFound } from 'next/navigation';
 
 export default function Page({ params }: { params: { id: number } }) {
     const id = params.id;
-    console.log(id, 'id');
-    const { data } = get_response(`/api/get_invoices/${id}`);
-    // const invoice = data?.find((invoice: { id: string; }) => invoice.id === id);
-    // console.log(id, 'data');
+    // console.log(id, 'id');
+    const  data  = get_response(`/api/get_invoices/${id}`);
     const invoice = data;
-    console.log(invoice, 'invoice');
+    // console.log(invoice, 'invoice');
 
   if(!invoice) {
     notFound()
