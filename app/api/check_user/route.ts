@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export default async function handler(req: { query: { email: any; }; }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: { isLoggedIn: boolean; }): void; new(): any; }; }; }) {
+export default async function GET(req: { query: { email: any; }; }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: { isLoggedIn: boolean; }): void; new(): any; }; }; }) {
   const { email } = req.query;
     console.log(email);
   // Your code to check if the user is logged in or not
