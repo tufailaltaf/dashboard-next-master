@@ -24,11 +24,10 @@ const numberOfInvoices = latestInvoices?.length;
 
 // no of customers
 // Filter the invoices to get an array of customer objects
-const customerObjects = latestInvoices?.filter((item: any) => {
-  return item.customer;
-});
+const {data:customers} = get_response(`/api/get_customers`)
+
 // Get the number of customer objects
-const numCustomerObjects = customerObjects?.length || 0;
+const numCustomerObjects = customers?.length || 0;
 //console.log("Number of customer objects:", numCustomerObjects);
 // revenue
 const {data: revenueData} = get_response(`/api/get_revenue`)
