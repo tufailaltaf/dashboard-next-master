@@ -51,5 +51,12 @@ export default function Page() {
       </main>
     );
   }
+  else{
+    return(
+      <div>
+        user Not found
+      </div>
+    )
+  }
   
 }
