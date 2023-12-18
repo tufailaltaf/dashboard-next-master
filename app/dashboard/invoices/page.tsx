@@ -9,17 +9,17 @@ import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { get_response } from '@/actions/response';
 
 
-export function fetchInvoicesPages(query: string) {
-  const {data} = get_response(`/api/get_invoices`)
-  const invoices = data
-  const ITEMS_PER_PAGE = 6;
-    // no of invoices
-const numberOfInvoices = invoices?.length;
+// export function fetchInvoicesPages(query: string) {
+//   const {data} = get_response(`/api/get_invoices`)
+//   const invoices = data
+//   const ITEMS_PER_PAGE = 6;
+//     // no of invoices
+// const numberOfInvoices = invoices?.length;
 
-    const count = numberOfInvoices?.length;
-    const totalPages = Math.ceil(count / ITEMS_PER_PAGE);
-    return totalPages;
-  }
+//     const count = numberOfInvoices?.length;
+//     const totalPages = Math.ceil(count / ITEMS_PER_PAGE);
+//     return totalPages;
+//   }
 export default  function Page({
   searchParams,
 }: {
