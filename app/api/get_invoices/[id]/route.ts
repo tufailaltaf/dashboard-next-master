@@ -1,7 +1,7 @@
 import prismadb from "@/app/lib/prismadb"
 import { NextRequest, NextResponse } from 'next/server'
 export async function GET (request: NextRequest,{ params }: { params: { id: number } }) {
-  // console.log('params',params.id)
+  console.log('params',params.id)
 const invoicedata = await prismadb.invoices.findUnique({
         where: {
           id: parseInt(String(params.id)),
@@ -9,6 +9,7 @@ const invoicedata = await prismadb.invoices.findUnique({
           customer: true,
         },
   })
+  console.log(invoicedata,'data invoice created')
 //   const responseBody = JSON.stringify(invoicedata)
   return NextResponse.json({
     data:invoicedata,

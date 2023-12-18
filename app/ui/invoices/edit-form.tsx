@@ -14,7 +14,6 @@ import { updateInvoice } from '@/app/lib/action';
 
 export default function EditInvoiceForm({
   invoice,
-  customers,
 }: any) {
   const updateInvoiceWithId = updateInvoice.bind(null, invoice?.id);
   console.log(invoice, 'updateInvoiceWithId');

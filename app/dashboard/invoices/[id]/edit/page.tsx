@@ -10,10 +10,8 @@ export default function Page({ params }: { params: { id: number } }) {
     // const invoice = data?.find((invoice: { id: string; }) => invoice.id === id);
     // console.log(id, 'data');
     const invoice = data;
-    // console.log(invoice, 'invoice');
-    // const customers = data?.customer
-    // console.log(customers, 'customers');
-const {data: customers} = get_response(`/api/get_customers`)
+    console.log(invoice, 'invoice');
+
   if(!invoice) {
     notFound()
   }
@@ -29,7 +27,7 @@ const {data: customers} = get_response(`/api/get_customers`)
           },
         ]}
       />
-      <Form invoice={invoice} customers={customers} />
+      <Form invoice={invoice}  />
     </main>
   );
 }
